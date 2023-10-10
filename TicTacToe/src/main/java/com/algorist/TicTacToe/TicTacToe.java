@@ -41,7 +41,8 @@ public class TicTacToe {
         return 0;
     }
     public int generateComputerMove(){
-        int randomNo=((int)(Math.random()))%columnsUnfilled.size();
+        int randomNo=((int)(Math.random()*10000))%columnsUnfilled.size();
+//        System.out.println("--- -dfdd "+randomNo);
         ArrayList<Integer> arr=new ArrayList<>(columnsUnfilled);
         int hash=arr.remove(randomNo);
         columnsUnfilled.remove(hash);
